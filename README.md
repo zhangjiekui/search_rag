@@ -1,6 +1,6 @@
 <div align="center">
 <h1 align="center">Search RAG</h1>
-<h2 align="center">search_with_lepton [https://github.com/leptonai/search_with_lepton]的自部署版</h2>
+<h2 align="center">search_with_lepton [ https://github.com/leptonai/search_with_lepton ] 的自部署版</h2>
 Build your own conversational search engine using less than 500 lines of code.
 <br/>
 <img width="70%" src="https://github.com/leptonai/search_with_lepton/assets/1506722/845d7057-02cd-404e-bbc7-60f4bae89680">
@@ -19,7 +19,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 xinference launch --model-name qwen1.5-chat --size-
 
 ## 运行my_search_rag.py
 
-## 下面是源repository[https://github.com/leptonai/search_with_lepton]的readme内容
+## 下面是源repository[ https://github.com/leptonai/search_with_lepton ]  的readme内容
 ## Features
 - Built-in support for LLM
 - Built-in support for search engine
