@@ -1,10 +1,20 @@
 <div align="center">
 <h1 align="center">Search RAG</h1>
+<h2 align="center">search_with_lepton 的自部署版</h2>
 Build your own conversational search engine using less than 500 lines of code.
 <br/>
 <img width="70%" src="https://github.com/leptonai/search_with_lepton/assets/1506722/845d7057-02cd-404e-bbc7-60f4bae89680">
 </div>
+## 启动后端服务（运行命令）
+docker run \
+--shm-size=64g \
+--name my_xinference -d -p 9997:9997 -e XINFERENCE_MODEL_SRC=modelscope \
+-v /home/jqsoft/.xinference:/root/.xinference \
+-v /home/jqsoft/.cache/huggingface:/root/.cache/huggingface \
+-v /home/jqsoft/.cache/modelscope:/root/.cache/modelscope \
+--gpus all xprobe/xinference:revised xinference-local -H 0.0.0.0 --log-level debug
 
+CUDA_VISIBLE_DEVICES=0,1,2,3 xinference launch --model-name qwen1.5-chat --size-in-billions 72 --n_gpu 4 --model-format gptq --quantization Int4  --gpu_memory_utilization 0.85 --tensor_parallel_size 4 --log-level debug
 
 ## Features
 - Built-in support for LLM
