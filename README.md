@@ -5,6 +5,7 @@ Build your own conversational search engine using less than 500 lines of code.
 <br/>
 <img width="70%" src="https://github.com/leptonai/search_with_lepton/assets/1506722/845d7057-02cd-404e-bbc7-60f4bae89680">
 </div>
+
 ## 启动后端服务（运行命令）
 docker run \
 --shm-size=64g \
